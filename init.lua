@@ -18,6 +18,9 @@ Plug('ms-jpq/coq.artifacts')
 -- Auto pairs
 Plug('windwp/nvim-autopairs')
 
+-- Theme
+Plug 'ellisonleao/gruvbox.nvim'
+
 vim.call('plug#end')
 
 -- FYI: You will need to download this first: rustup component add rust-src
@@ -36,3 +39,5 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 require'lspconfig'.pyright.setup{}
 require("nvim-autopairs").setup {}
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
