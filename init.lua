@@ -6,9 +6,14 @@ vim.call('plug#begin')
 -- On-demand loading: loaded when the specified command is executed
 Plug('preservim/nerdtree', { ['on'] = 'NERDTreeToggle' })
 
+-- LSP servers
 Plug('williamboman/mason.nvim')
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('neovim/nvim-lspconfig')
+
+-- Code completion
+Plug('ms-jpq/coq_nvim')
+Plug('ms-jpq/coq.artifacts')
 
 vim.call('plug#end')
 
