@@ -15,6 +15,9 @@ Plug('neovim/nvim-lspconfig')
 Plug('ms-jpq/coq_nvim')
 Plug('ms-jpq/coq.artifacts')
 
+-- Auto pairs
+Plug('windwp/nvim-autopairs')
+
 vim.call('plug#end')
 
 -- FYI: You will need to download this first: rustup component add rust-src
@@ -32,3 +35,4 @@ require'lspconfig'.rust_analyzer.setup{}
 require("mason").setup()
 require("mason-lspconfig").setup()
 require'lspconfig'.pyright.setup{}
+require("nvim-autopairs").setup {}
