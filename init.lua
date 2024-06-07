@@ -3,8 +3,9 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
--- On-demand loading: loaded when the specified command is executed
-Plug('preservim/nerdtree', { ['on'] = 'NERDTreeToggle' })
+-- Code tree
+Plug 'nvim-tree/nvim-tree.lua'
+Plug('nvim-tree/nvim-web-devicons')
 
 -- LSP servers
 Plug('williamboman/mason.nvim')
@@ -47,6 +48,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 
 require('nvim-treesitter.configs').setup {
                 ensure_installed = { 'rust', 'python' },
@@ -58,12 +60,12 @@ require('nvim-treesitter.configs').setup {
                     enable = true,
                 },
             }
-
 require'lspconfig'.rust_analyzer.setup{}
 require("mason").setup()
 require("mason-lspconfig").setup()
 require'lspconfig'.pyright.setup{}
 require("nvim-autopairs").setup {}
+require("nvim-tree").setup()
 
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
