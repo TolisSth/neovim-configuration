@@ -4,7 +4,7 @@ Yet another neovim configuration
 ### Installed plugins 
 - Mason 
 - Nvim lspconfig
-- Nerd Tree
+- Nvim Tree
 - COQ 
 - Nvim autopairs
 - Gruvbox (theme)
