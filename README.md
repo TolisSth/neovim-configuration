@@ -16,6 +16,7 @@ I didn't write a lot of shortcuts, I only wrote the following:
 - <leader>fg: Live grep (telescope)
 - <leader>fb: Find in buffer (telescope)
 - <leader>fh: Help (telescope)
+- C - h: Open NvimTree (NvimTree)
 
 ### Requirements
 - Rust analyzer
