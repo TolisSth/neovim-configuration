@@ -29,6 +29,12 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 
+-- Copilot 
+Plug 'github/copilot.vim'
+
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", "copilot#Accept('<CR>')", { silent = true, expr = true })
+
 vim.call('plug#end')
 
 -- FYI: You will need to download this first: rustup component add rust-src
