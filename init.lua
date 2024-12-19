@@ -20,7 +20,8 @@ Plug('ms-jpq/coq.artifacts')
 Plug('windwp/nvim-autopairs')
 
 -- Theme
-Plug 'ellisonleao/gruvbox.nvim'
+-- Plug 'ellisonleao/gruvbox.nvim'
+Plug 'scottmckendry/cyberdream.nvim'
 
 -- Syntax highlighting / dependecy for telescope
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -74,6 +75,7 @@ require("nvim-autopairs").setup {}
 require("nvim-tree").setup()
 
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd("colorscheme cyberdream")
+-- vim.cmd([[colorscheme gruvbox]])
 vim.wo.number = true
 
